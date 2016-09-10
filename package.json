@@ -1,0 +1,29 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "Vancouver wheather app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Billbastos/weatherapp.git"
+  },
+  "author": "Guilherme Bastos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Billbastos/weatherapp/issues"
+  },
+  "homepage": "https://github.com/Billbastos/weatherapp#readme",
+  "dependencies": {
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-jasmine": "^1.0.3",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-css": "^0.5.4",
+    "grunt-svgmin": "^3.3.0"
+  }
+}
