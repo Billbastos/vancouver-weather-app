@@ -2,3 +2,8 @@ src/icons-reference.html
 src/style.css
 src/webfont.css
 node_modules/*
+_SpecRunner.html
+.grunt/*
+dist/*
+public/css/*
+public/js/*
