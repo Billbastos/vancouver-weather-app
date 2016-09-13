@@ -1,0 +1,63 @@
+.week-table {
+
+}
+
+.week-table > .thead {
+    padding: 10px 0.8em;
+    background-color: rgba(222, 93, 64, 0.85);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+.week-table > .tbody {
+    background: rgba(225, 107, 81, 0.85);
+    overflow-y: scroll;
+    height: 143px;
+    font-size: 0.9em;
+}
+
+.week-table > .tbody > .row {
+    display: inline-block;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    width: 100%;
+    padding: 0.8em 0;
+    color: white;
+}
+
+.week-table > .tbody > .row > .day {
+    padding-left: 0.8em;
+    float: left;
+    width: 35%;
+}
+
+.week-table > .tbody > .row > .icon-temp {
+    float: left;
+    width: 35%;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.week-table > .tbody > .row > .max-temp {
+    float: left;
+    width: 12%;
+}
+
+.week-table > .tbody > .row > .min-temp {
+    float: left;
+    width: 12%;
+    color: rgba(255,255,255,0.8);
+}
+
+.week-table > .tbody::-webkit-scrollbar-track {
+    background-color: rgba(255,255,255,0.3);
+}
+
+.week-table > .tbody::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.week-table > .tbody::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,0.3);
+}
