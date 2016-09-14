@@ -47,45 +47,6 @@ module.exports = function(grunt) {
         }
     };
 
-    // Browserify ================================
-    config.browserify = {
-        dist: {
-            options: {
-                transform: [
-                    ['babelify', {
-                        presets: ['es2015']
-                    }]
-                ]
-            },
-            src: [
-                "src/js/model/FiveDaysThreeHoursModel.js",
-                "src/js/dao/FiveDaysThreeHoursDao.js",
-                "src/js/service/FiveDaysThreeHoursService.js",
-                "src/js/controller/FiveDaysThreeHoursController.js",
-                "src/js/view/*.js",
-                "src/js/helper/*.js",
-                "src/js/app.js"
-            ],
-            dest: distPath + "app.js"
-        }
-    };
-
-    // Minification ================================
-    config.uglify = {
-        options: {
-            banner: "/*! v<%= grunt.option('versionNumber') %> - <%= grunt.template.today('yyyy-mm-dd') %> */ ",
-            mangle: false,
-            compress: true,
-            report: "gzip"
-        },
-        target: {
-            src: distPath + "*.js",
-            expand: true,
-            ext: ".min.js",
-            dest: publicJsPath
-        }
-    };
-
     config.cssmin = {
         css: {
             src: distPath + "*.css",
@@ -148,6 +109,7 @@ module.exports = function(grunt) {
     grunt.registerTask("default", ["clean", "concat", "cssmin", "svgmin"]);
     grunt.registerTask("tests", ["default", "connect:server", "jasmine"]);
     grunt.registerTask("testsJasmine", ["connect:server", "jasmine"]);
+    grunt.registerTask("server", ["default", "connect:manual"]);
 
 
 };
