@@ -17,10 +17,10 @@ class FiveDaysThreeHoursDao {
                         let data = JSON.parse(this.responseText);
                         resolve(data.list);
                     } else if (this.readyState == 4 && this.status != 200) {
-                        reject(Error(this.statusText));
+                        reject(this.statusText);
                     }
                 } catch(e){
-                    reject(Error(e));
+                    reject(e);
                 }
             };
 

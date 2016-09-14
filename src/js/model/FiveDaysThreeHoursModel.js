@@ -3,7 +3,7 @@ class FiveDaysThreeHoursModel {
     constructor(date, main, weather, clouds, wind, rain, snow) {
         this._date      = new Date(date*1000);
         this._main      = main ? main : {};
-        this._weather   = weather ? weather : {};
+        this._weather   = weather ? weather : [];
         this._clouds    = clouds ? clouds : {};
         this._wind      = wind ? wind : {};
         this._rain      = rain ? rain : {};
@@ -20,27 +20,27 @@ class FiveDaysThreeHoursModel {
     }
 
     get main(){
-        return this._main.map((m)=>{return m;});
+        return Object.assign({}, this._main); // [].concat(arr)
     }
 
     get weather(){
-        return this._weather.map((w)=>{return w;});
+        return [].concat(this._weather);
     }
 
     get clouds(){
-        return this._clouds.map((c)=>{return c;});
+        return Object.assign({}, this._clouds);
     }
 
     get wind(){
-        return this._wind.map((w)=>{return w;});
+        return Object.assign({}, this._wind);
     }
 
     get rain(){
-        return this._rain.map((r)=>{return r;});
+        return Object.assign({}, this._rain);
     }
 
     get snow(){
-        return this._snow.map((s)=>{return s;});
+        return Object.assign({}, this._snow);
     }
 
 }

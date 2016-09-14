@@ -5,7 +5,7 @@ class FiveDaysThreeHoursService {
         Object.freeze(this);
     }
 
-    parseData(d) {
+    _parseData(d) {
       return new FiveDaysThreeHoursModel(
           d.dt,
           d.main,
@@ -17,16 +17,16 @@ class FiveDaysThreeHoursService {
       );
     }
 
-    listAll() {
-        this._dao.list().then((data)=>{
-            let listFivaeDaysData = [];
+    get listAll() {
+
+        return this._dao.list().then((data)=>{
+            let arrRef = [];
             data.map((d)=>{
-                listFivaeDaysData.push(this.parseData(d));
-                // Montar o template aqui !!! 
+                arrRef.push(this._parseData(d));
             });
-            console.log(listFivaeDaysData);
-        }, (error)=>{
-            console.log('Error '+ error);
+            return arrRef;
+        }, (e)=>{
+            throw new Error(e);
         });
     }
 

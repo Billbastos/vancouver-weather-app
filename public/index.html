@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Weather App</title>
+    <link rel="icon" href="images/sun.png" sizes="any" type="image/png">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato%3A300%2C300italic%2C700%2C700italic%2C900%2C400%7CPacifico%3A400&subset=latin%2Clatin-ext&ver=4.6.1" />
     <link rel="stylesheet" href="css/app.min.css" />
 </head>
@@ -13,103 +14,21 @@
     <section class="container">
 
         <video class="video-background" autoplay muted loop>
-              <!-- <source src="https://www.youtube.com/watch?v=ZLL6du--lQA" type="video/mp4"/> -->
-              <source src="http://www.quirksmode.org/html5/videos/big_buck_bunny.mp4" type="video/mp4"/>
+              <source src="video/vancouver.mp4" type="video/mp4"/>
         </video>
 
         <div class="weather-box">
 
-            <session class="current">
-                <div class="name">Vancouver</div>
-                <div class="message">Today's forecast</div>
-                <div class="description"><span class="info">Sunny</span> <span data-icon="/" class="icon"></span></div>
-                <div class="temperature"><span class="info">24</span> <span data-icon="9" class="icon"></span></div>
-            </session>
-
+            <session class="current" id="currentWeatherView"></session>
             <session class="time">
-                <div class="weather-time">
-                    <ul class="item">
-                        <li class="unit">Now</li>
-                        <li class="unit"><span data-icon="/" class="icon"></span></li>
-                        <li class="unit">18 &#8451;</li>
-                    </ul>
-                    <ul class="item">
-                        <li class="unit">Now</li>
-                        <li class="unit"><span data-icon="/" class="icon"></span></li>
-                        <li class="unit">18 &#8451;</li>
-                    </ul>
-                    <ul class="item">
-                        <li class="unit">Now</li>
-                        <li class="unit"><span data-icon="/" class="icon"></span></li>
-                        <li class="unit">18 &#8451;</li>
-                    </ul>
-                    <ul class="item">
-                        <li class="unit">Now</li>
-                        <li class="unit"><span data-icon="/" class="icon"></span></li>
-                        <li class="unit">18 &#8451;</li>
-                    </ul>
-                    <ul class="item">
-                        <li class="unit">Now</li>
-                        <li class="unit"><span data-icon="/" class="icon"></span></li>
-                        <li class="unit">18 &#8451;</li>
-                    </ul>
-                    <ul class="item">
-                        <li class="unit">Now</li>
-                        <li class="unit"><span data-icon="/" class="icon"></span></li>
-                        <li class="unit">18 &#8451;</li>
-                    </ul>
-                    <ul class="item">
-                        <li class="unit">Now</li>
-                        <li class="unit"><span data-icon="/" class="icon"></span></li>
-                        <li class="unit">18 &#8451;</li>
-                    </ul>
-                    <ul class="item">
-                        <li class="unit">Now</li>
-                        <li class="unit"><span data-icon="/" class="icon"></span></li>
-                        <li class="unit">18 &#8451;</li>
-                    </ul>
-                </div>
+                <div class="weather-time" id="timeWeatherView"></div>
             </session>
-
-            <session class="description">description sunny day</session>
-
+            <session class="description" id="descriptionWeatherView"></session>
             <session class="week">
-
-                <div class="week-table">
-                    <header class="thead">Week information</header>
-                    <div class="tbody">
-                        <div class="row">
-                          <div class="day">Tue</div>
-                          <div class="icon-temp"><span data-icon="/" class="icon"></span><br /></div>
-                          <div class="max-temp">24</div>
-                          <div class="min-temp">10</div>
-                        </div>
-                        <div class="row">
-                          <div class="day">Tue</div>
-                          <div class="icon-temp"><span data-icon="/" class="icon"></span><br /></div>
-                          <div class="max-temp">24</div>
-                          <div class="min-temp">10</div>
-                        </div>
-                        <div class="row">
-                          <div class="day">Tue</div>
-                          <div class="icon-temp"><span data-icon="/" class="icon"></span><br /></div>
-                          <div class="max-temp">24</div>
-                          <div class="min-temp">10</div>
-                        </div>
-                        <div class="row">
-                          <div class="day">Tue</div>
-                          <div class="icon-temp"><span data-icon="/" class="icon"></span><br /></div>
-                          <div class="max-temp">24</div>
-                          <div class="min-temp">10</div>
-                        </div>
-                        <div class="row">
-                          <div class="day">Tue</div>
-                          <div class="icon-temp"><span data-icon="/" class="icon"></span><br /></div>
-                          <div class="max-temp">24</div>
-                          <div class="min-temp">10</div>
-                        </div>
-                    </div>
-                </div>
+              <div class="week-table">
+                  <header class="thead">Week information</header>
+                  <div class="tbody" id="weekWeatherView"></div>
+              </div>
             </session>
 
             <footer class="footer">
@@ -118,14 +37,7 @@
 
         </div>
 
-
-
-
-
     </section>
-
-
-
 
     <script src="js/app.js"></script>
 

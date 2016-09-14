@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         publicImgPath = "public/images/";
 
     // Clean Folder ================================
-    config.clean = [distPath, publicJsPath, publicCssPath, publicImgPath];
+    config.clean = [distPath, publicJsPath, publicCssPath];
 
     // Watch ================================
     config.watch = {
@@ -29,6 +29,13 @@ module.exports = function(grunt) {
                 "src/js/model/FiveDaysThreeHoursModel.js",
                 "src/js/dao/FiveDaysThreeHoursDao.js",
                 "src/js/service/FiveDaysThreeHoursService.js",
+                "src/js/controller/FiveDaysThreeHoursController.js",
+                "src/js/view/FiveDaysThreeHoursCurrentView.js",
+                "src/js/view/FiveDaysThreeHoursTimeView.js",
+                "src/js/view/FiveDaysThreeHoursDescriptionView.js",
+                "src/js/view/FiveDaysThreeHoursWeekView.js",
+                "src/js/helper/IconCodeHelper.js",
+                "src/js/helper/DateHelper.js",
                 "src/js/app.js"
             ],
             dest: publicJsPath + "app.js"
@@ -58,6 +65,13 @@ module.exports = function(grunt) {
                 "src/js/model/FiveDaysThreeHoursModel.js",
                 "src/js/dao/FiveDaysThreeHoursDao.js",
                 "src/js/service/FiveDaysThreeHoursService.js",
+                "src/js/controller/FiveDaysThreeHoursController.js",
+                "src/js/view/FiveDaysThreeHoursCurrentView.js",
+                "src/js/view/FiveDaysThreeHoursTimeView.js",
+                "src/js/view/FiveDaysThreeHoursDescriptionView.js",
+                "src/js/view/FiveDaysThreeHoursWeekView.js",
+                "src/js/helper/IconCodeHelper.js",
+                "src/js/helper/DateHelper.js",
                 "src/js/app.js",
             ],
             dest: distPath + "app.js"
@@ -122,7 +136,6 @@ module.exports = function(grunt) {
                 version: "2.3.4",
                 summary: true,
                 specs: "specs/scripts/**/*-spec.js",
-                helpers: "specs/helpers/**/*.js",
                 host: "http://localhost:8000/"
             }
         }

@@ -1,113 +1,123 @@
 .weather-box {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
 
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
 
-  width: 60%;
-  margin: 1em auto 0;
+    width: 60%;
+    height: 512px;
 
-  -moz-box-shadow: 0.3em 0.8em 1.6em rgba(0,0,0,0.5);
-  -webkit-box-shadow: 0.3em 0.8em 1.6em rgba(0,0,0,0.5);
-  box-shadow: 0.3em 0.8em 1.6em rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    margin: auto;
 
+    -moz-box-shadow: 0.3em 0.8em 1.6em rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0.3em 0.8em 1.6em rgba(0,0,0,0.5);
+    box-shadow: 0.3em 0.8em 1.6em rgba(0,0,0,0.5);
 }
 
 .weather-box > * {
-  flex: 1 100%;
+    flex: 1 100%;
 }
 
 .weather-box > .footer {
-  font-size: 0.7em;
-  padding: 1em;
-  color: white;
-  background: rgba(0,0,0,0.7);
+    text-align: center;
+    font-size: 0.7em;
+    padding: 1em;
+    color: white;
+    background: rgba(36, 103, 137, 0.7);
 }
 
 .weather-box > .current {
-  padding: 0.6em;
-  background: rgba(249, 195, 74, 0.85);
+    padding: 0.6em;
+    background: rgba(249, 195, 74, 0.85);
+    transition: background .5s ease-out;
+}
+
+.weather-box > .current:hover {
+    background: rgba(247, 179, 25, 1);
 }
 
 .weather-box > .current,
 .weather-box > .current > * {
-  text-align: center;
+    text-align: center;
 }
 
 .weather-box > .current > .name {
-  text-transform: uppercase;
-  letter-spacing: 0.3em;
-  margin: 0.8em 0 0.5em;
-  font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    margin: 0.8em 0 0.5em;
+    font-size: 1.2em;
 }
 
 .weather-box > .current > .message {
-  text-transform: uppercase;
-  letter-spacing: 0.4em;
-  margin: 0 0 1em;
-  font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    margin: 0 0 1em;
+    font-size: 1em;
 }
 
 .weather-box > .current > .description {
-  float: left;
-  width: 45%;
-  text-align: left;
-  line-height: 90px;
-  height: 90px;
-  margin: 0 auto;
+    float: left;
+    width: 45%;
+    text-align: left;
+    line-height: 90px;
+    height: 90px;
+    margin: 0 auto;
 }
 
 .weather-box > .current > .description > .info {
-  float: right;
-  margin-top: -5px;
+    float: right;
+    margin-top: -5px;
 }
 
 .weather-box > .current > .description > .icon {
-  float: right;
-  font-size: 2.4em;
-  padding-right: 5px;
+    float: right;
+    font-size: 2.4em;
+    padding-right: 5px;
 }
 
 .weather-box > .current > .temperature {
-  float: right;
-  font-size: 2em;
-  width: 45%;
-  text-align: right;
-  line-height: 90px;
-  height: 90px;
-  margin: 0 auto;
+    float: right;
+    font-size: 2em;
+    width: 45%;
+    text-align: right;
+    line-height: 90px;
+    height: 85px;
+    margin: 0 auto;
 }
 
 .weather-box > .current > .temperature > .info {
-  margin-top: -5px;
-  float: left;
+    margin-top: -5px;
+    float: left;
 }
 
 .weather-box > .current > .temperature > .icon {
-  padding-left: 5px;
-  float: left;
+    padding-left: 5px;
+    float: left;
 }
 
 .weather-box > .week {
-  height: 180px;
+    height: 180px;
 }
 
 .weather-box > .time {
-  font-size: 0.8em;
+    font-size: 0.8em;
 }
 
 .weather-box > .description {
-  color: white;
-  padding: 0.6em;
-  background: rgba(141, 120, 203, 0.85);
-  height: 80px;
+    color: white;
+    padding: 0.6em;
+    background: rgba(141, 120, 203, 0.85);
+    height: 80px;
 }
 
 @media all and (min-width: 600px) {
-  .weather-box > .current { flex: 1 auto; }
-  .weather-box > .time { flex: 2 auto; }
+    .weather-box > .current { flex: 1 auto; }
+    .weather-box > .time { flex: 2 auto; }
 }
