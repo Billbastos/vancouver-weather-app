@@ -54,16 +54,6 @@ module.exports = function(grunt) {
         }
     };
 
-
-    // Svgmin =====================================
-    config.svgmin = {
-        dist: {
-            files: [{
-                //'public/images/download.svg' : 'src/images/download.svg'
-            }]
-        }
-    };
-
     // Connect Static Web Server =====================================
     config.connect = {
         manual: {
@@ -99,14 +89,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-contrib-clean");
     grunt.loadNpmTasks("grunt-contrib-watch");
     grunt.loadNpmTasks("grunt-contrib-concat");
-    grunt.loadNpmTasks("grunt-browserify");
-    grunt.loadNpmTasks("grunt-contrib-uglify");
     grunt.loadNpmTasks("grunt-contrib-connect");
     grunt.loadNpmTasks("grunt-contrib-jasmine");
     grunt.loadNpmTasks("grunt-css");
-    grunt.loadNpmTasks("grunt-svgmin");
 
-    grunt.registerTask("default", ["clean", "concat", "cssmin", "svgmin"]);
+    grunt.registerTask("default", ["clean", "concat", "cssmin"]);
     grunt.registerTask("tests", ["default", "connect:server", "jasmine"]);
     grunt.registerTask("testsJasmine", ["connect:server", "jasmine"]);
     grunt.registerTask("server", ["default", "connect:manual"]);
