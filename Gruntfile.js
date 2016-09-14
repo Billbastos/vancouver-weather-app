@@ -30,12 +30,8 @@ module.exports = function(grunt) {
                 "src/js/dao/FiveDaysThreeHoursDao.js",
                 "src/js/service/FiveDaysThreeHoursService.js",
                 "src/js/controller/FiveDaysThreeHoursController.js",
-                "src/js/view/FiveDaysThreeHoursCurrentView.js",
-                "src/js/view/FiveDaysThreeHoursTimeView.js",
-                "src/js/view/FiveDaysThreeHoursDescriptionView.js",
-                "src/js/view/FiveDaysThreeHoursWeekView.js",
-                "src/js/helper/IconCodeHelper.js",
-                "src/js/helper/DateHelper.js",
+                "src/js/view/*.js",
+                "src/js/helper/*.js",
                 "src/js/app.js"
             ],
             dest: publicJsPath + "app.js"
@@ -66,13 +62,9 @@ module.exports = function(grunt) {
                 "src/js/dao/FiveDaysThreeHoursDao.js",
                 "src/js/service/FiveDaysThreeHoursService.js",
                 "src/js/controller/FiveDaysThreeHoursController.js",
-                "src/js/view/FiveDaysThreeHoursCurrentView.js",
-                "src/js/view/FiveDaysThreeHoursTimeView.js",
-                "src/js/view/FiveDaysThreeHoursDescriptionView.js",
-                "src/js/view/FiveDaysThreeHoursWeekView.js",
-                "src/js/helper/IconCodeHelper.js",
-                "src/js/helper/DateHelper.js",
-                "src/js/app.js",
+                "src/js/view/*.js",
+                "src/js/helper/*.js",
+                "src/js/app.js"
             ],
             dest: distPath + "app.js"
         }

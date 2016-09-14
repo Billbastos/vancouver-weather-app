@@ -1,7 +1,7 @@
 class FiveDaysThreeHoursDao {
 
     constructor() {
-        this._url = "http://api.openweathermap.org/data/2.5/forecast?q=Vancouver,us&appid=411b84e404537fea26739061f4a36729";
+        this._url = "http://api.openweathermap.org/data/2.5/forecast?q=Vancouver,ca&appid=411b84e404537fea26739061f4a36729&units=metric";
         Object.freeze(this);
     }
 

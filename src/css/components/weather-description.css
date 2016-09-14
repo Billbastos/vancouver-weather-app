@@ -1,0 +1,46 @@
+.weather-description {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+
+    color: white;
+    padding: 0.6em;
+    font-weight: lighter;
+    font-size: 0.95em;
+    background: rgba(141, 120, 203, 0.85);
+    transition: background 0.5s ease-out;
+    height: 80px;
+}
+
+.weather-description:hover {
+    background: rgba(117, 92, 192, 1);
+}
+
+.weather-description > .description:nth-child(1) {
+    border-right: 1px solid rgba(255, 255, 255 ,0.3);
+    padding-left: 5px;
+}
+
+.weather-description > .description:nth-child(2) {
+    padding-left: 10px;
+}
+
+.weather-description > .description > .group-1 > .desc-line,
+.weather-description > .description > .group-2 > .desc-line {
+    line-height: 1.8em;
+}
+
+.weather-description > .description > .group-1 > .desc-line > span,
+.weather-description > .description > .group-2 > .desc-line > span {
+    display: inline-block;
+    float:left;
+    letter-spacing: 0.15em;
+    width: 110px;
+}
+
+.weather-description > .description { flex: 1 auto; }

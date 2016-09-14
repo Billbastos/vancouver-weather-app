@@ -9,7 +9,7 @@
     flex-flow: row wrap;
 
     width: 60%;
-    height: 512px;
+    height: 511px;
 
     position: absolute;
     top: 0; bottom: 0;
@@ -27,9 +27,11 @@
 
 .weather-box > .footer {
     text-align: center;
+    letter-spacing: 0.2em;
     font-size: 0.7em;
     padding: 1em;
     color: white;
+    font-weight: lighter;
     background: rgba(36, 103, 137, 0.7);
 }
 
@@ -110,14 +112,5 @@
     font-size: 0.8em;
 }
 
-.weather-box > .description {
-    color: white;
-    padding: 0.6em;
-    background: rgba(141, 120, 203, 0.85);
-    height: 80px;
-}
-
-@media all and (min-width: 600px) {
-    .weather-box > .current { flex: 1 auto; }
-    .weather-box > .time { flex: 2 auto; }
-}
+.weather-box > .current { flex: 1 auto; }
+.weather-box > .time { flex: 2 auto; }
